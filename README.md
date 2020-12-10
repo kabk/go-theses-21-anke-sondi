@@ -1,1 +1,1 @@
-# kabk-go-theses-21-anke-sondi
+# go-theses-21-anke-sondi
