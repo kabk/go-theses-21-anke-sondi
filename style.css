@@ -8,6 +8,48 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: white;
+}
+
+#abstract-dropdown{
+  height: 100%;
+  margin-left:20px;
+  margin-top:20px;
+
+}
+
+#abstract-content {
+  display: none;
+  margin-left:20px;
+}
+
+#content-dropdown{
+  height: 100%;
+  margin-left:20px;
+  margin-top:20px;
+
+}
+
+#content-content {
+  display: none;
+  margin-left:20px;
+}
+
+
+#intro-content {
+  display: none;
+  margin-left:20px;
+}
+
+#intro-dropdown{
+  height: 100%;
+  margin-left:20px;
+  margin-top:20px;
+
+}
+
+
 #zero-dropdown{
   height: 100%;
   margin-left:20px;
@@ -209,4 +251,12 @@ a{
 .responsive {
   width: 94%;
   height: auto;
+}
+
+.rotateimg90 {
+  -webkit-transform:rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
