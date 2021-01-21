@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded',function(){
   }
 });
 
-let wait = 2000;
+let wait = 1000;
 
 let interact = 1;
 
