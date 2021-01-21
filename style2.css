@@ -52,6 +52,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
    font-family: "SangBleu Regular";	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
+	text-align: justify;
 }
 
 p {
