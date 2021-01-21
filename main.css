@@ -1,0 +1,573 @@
+@font-face {
+	font-family: 'honitonbold';
+	src: url('fontfiles/honiton-bold-webfont.eot');
+	src: url('fontfiles/honiton-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fontfiles/honiton-bold-webfont.woff2') format('woff2'),
+	url('fontfiles/honiton-bold-webfont.woff') format('woff'),
+	url('fontfiles/honiton-bold-webfont.ttf') format('truetype'),
+	url('fontfiles/honiton-bold-webfont.svg#honitonbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	-moz-font-feature-settings: "locl=1", "numr=1", "dnom=1", "frac=1", "ordn=1", "liga=1";
+	-moz-font-feature-settings: "locl", "numr", "dnom", "frac", "ordn", "liga";
+	-ms-font-feature-settings: "locl", "numr", "dnom", "frac", "ordn", "liga";
+	-webkit-font-feature-settings: "locl", "numr", "dnom", "frac", "ordn", "liga";
+	font-feature-settings: "locl", "numr", "dnom", "frac", "ordn", "liga";
+	font-variant-ligatures: common-ligatures;
+	unicode-range: U+0-10FFFF, U+2202, U+2021, U+2020, U+221E, U+2260, U+221A, U+0192, U+03C0, U+2248, U+0141, U+0142, U+0160, U+0161, U+017D, U+017E, U+2211, U+03A0, U+03A9, U+0394, U+25CA, U+FB03, U+FB04, U+02C7, U+030C, U+02D8, U+0306, U+2264, U+2265, U+0120, U+0121;
+}
+
+@font-face {
+	font-family: 'honitonregular';
+	src: url('fontfiles/honiton-regular-webfont.eot');
+	src: url('fontfiles/honiton-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fontfiles/honiton-regular-webfont.woff2') format('woff2'),
+	url('fontfiles/honiton-regular-webfont.woff') format('woff'),
+	url('fontfiles/honiton-regular-webfont.ttf') format('truetype'),
+	url('fontfiles/honiton-regular-webfont.svg#honitonregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	-moz-font-feature-settings: "locl=1", "ordn=1", "liga=1";
+	-moz-font-feature-settings: "locl", "ordn", "liga";
+	-ms-font-feature-settings: "locl", "ordn", "liga";
+	-webkit-font-feature-settings: "locl", "ordn", "liga";
+	font-feature-settings: "locl", "ordn", "liga";
+	font-variant-ligatures: common-ligatures;
+	unicode-range: U+0-10FFFF, U+2202, U+2021, U+2020, U+221E, U+2260, U+221A, U+0192, U+03C0, U+2248, U+0141, U+0142, U+0160, U+0161, U+017D, U+017E, U+2211, U+03A0, U+03A9, U+0394, U+25CA, U+FB03, U+FB04, U+02C7, U+030C, U+02D8, U+0306, U+2264, U+2265, U+0120, U+0121;
+}
+
+/*------------------------------------------------------------------------------------------------------------------base-styles*/
+
+html, body {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: "honitonregular";
+	color: #fff;
+	background-color: rgb(120,20,255);
+	font-variant-ligatures: common-ligatures;
+	font-size: 14pt;
+	cursor: crosshair;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+	transition: color 1.6s ease;
+}
+
+body.canvasTransparent {
+	transition: background-color 1.6s ease, color 1.6s ease;
+}
+
+/**/
+
+.homepage-text-link {
+	opacity: 1;
+	color: inherit;
+	font-size: inherit;
+	-webkit-opacity: 1;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-color-opacity: 1;
+	-webkit-text-stroke-width: 1px;
+ 	-webkit-text-stroke-color: inherit;
+}
+
+.homepage-text-link-inner {
+	display: inline;
+	color: inherit;
+	font-size: inherit;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+ 	overflow: visible;
+}
+
+::selection {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	display: none !important;
+}
+
+.homepage-text-holder {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 50px 15px;
+}
+
+.homepage-text {
+	color: inherit;
+	font-size: 18pt;
+	font-weight: 300;
+	line-height: 1.2em;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+.avoid-break-before {
+	break-before: avoid;
+}
+
+@media (min-width: 1024px) {
+	.homepage-text-holder {
+		width: 92%;
+		max-width: 100%;
+		padding: 40px 50px;
+	}
+	.homepage-text {
+		font-size: 4vw;
+		font-weight: 300;
+		line-height: 1.2em;
+	  -webkit-perspective: 20em; /* Safari 4-8 */
+	  -webkit-perspective-origin: top; /* Safari 4-8 */
+	  perspective: 20em;
+	  perspective-origin: top;
+	}
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-family: 'honitonregular';
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+p {
+	font-size: 12pt;
+}
+
+a, a:visited, a:hover, a:active, a:focus, a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.title-bottom {
+	top: auto;
+	left: auto;
+	bottom: 1.5vw;
+	right: -0.5vw;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+img {
+	pointer-events: none;
+}
+
+::selection {
+	background-color: transparent;
+}
+
+::-webkit-selection {
+	background-color: transparent;
+}
+
+html * {
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+.img-responsive {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+/**/
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+	width: 100% !important;
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	color: inherit !important;
+}
+
+.product_meta {
+	display: none;
+}
+
+input {
+	padding: 0;
+}
+
+textarea {
+	padding-top: 12px;
+}
+
+button {
+	background-color: transparent;
+	border-radius: 0 !important;
+	font-family: 'honitonregular';
+}
+
+input[type=number] {
+	display: inline-block;
+	width: 84px;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+	border-color: inherit;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	margin-right: -2px;
+	-webkit-appearance: none;
+	background-color: transparent;
+	font-family: 'honitonregular';
+}
+
+.control.numberHolder {
+	width: 84px;
+	overflow-x: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	opacity: 0;
+}
+
+select, form[name=checkout] input {
+	background-color: transparent;
+	border-style: none;
+	font-family: 'honitonregular' !important;
+	color: inherit !important;
+	line-height: 1.2em !important;
+	border-radius: 0 !important;
+	height: 100% !important;
+	-webkit-appearance: none !important;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,
+.cart-empty,
+.control,  .woocommerce-info, span.option, .optionsHeader, button.control, label,
+.woocommerce-input-wrapper {
+	box-sizing: border-box !important;
+	line-height: 1.4em !important;
+	background-color: transparent !important;
+	font-weight: normal !important;
+	display: inline-block !important;
+	font-size: 14pt !important;
+	border-left-style: none !important;
+	color: inherit !important;
+	font-family: 'honitonregular' !important;
+	border-right-style: solid !important;
+	border-right-width: 1px !important;
+	border-bottom-style: solid !important;
+	border-bottom-width: 1px !important;
+	border-top-style: solid !important;
+	border-top-width: 1px !important;
+	padding-right: 12px !important;
+	padding-left: 12px !important;
+	border-radius: 0 !important;
+	-webkit-appearance: none !important;
+	padding-top: 1px !important;
+	margin-top: -1px !important;
+	height: 1.5em !important;
+	/*overflow: hidden !important;*/
+}
+
+.clearLeft {
+	clear: right;
+}
+
+.woocommerce form .form-row::after, .woocommerce form .form-row::before, .woocommerce-page form .form-row::after, .woocommerce-page form .form-row::before,
+.woocommerce form .form-row::after, .woocommerce form .form-row::before, .woocommerce-page form .form-row::after, .woocommerce-page form .form-row::before,
+.woocommerce .woocommerce-billing-fields::after, .woocommerce .woocommerce-billing-fields::before, .woocommerce .woocommerce-shipping-fields::after,
+.woocommerce .woocommerce-shipping-fields::before, .woocommerce-page .woocommerce-billing-fields::after, .woocommerce-page .woocommerce-billing-fields::before,
+.woocommerce-page .woocommerce-shipping-fields::after, .woocommerce-page .woocommerce-shipping-fields::before {
+	content: none !important;
+	display: inline-block !important;
+}
+
+.woocommerce form .form-row:nth-child(1) {
+	margin-top: 5px !important;
+}
+
+label,
+.woocommerce-input-wrapper {
+	overflow: hidden !important;
+	margin-top: -6px !important;
+	width: 50% !important;
+}
+
+@media(min-width: 768px) {
+	label,
+	.woocommerce-input-wrapper {
+		overflow: hidden !important;
+		margin-top: -7px !important;
+		width: 50% !important;
+	}
+	.woocommerce form .form-row:nth-child(1) {
+		margin-top: 6px !important;
+	}
+}
+
+input[name=billing_address_1]::placeholder,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	color: rgba(0,0,0,0) !important;
+	opacity: 0 !important;
+}
+
+select[name=billing_country] {
+	height: 0 !important;
+}
+
+.woocommerce form .form-row .select2-container {
+	line-height: 1.2em !important;
+}
+
+.woocommerce-additional-fields {
+	display: none !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+}
+
+.return-to-shop {
+	display: none !important;
+	position: absolute !important;
+	top: 0 !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+.woocommerce form .form-row,
+.woocommerce form .form-row-last {
+	width: 100% !important;
+}
+
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last {
+	float: left !important;
+}
+
+select, input[type="color" i][list] {
+	color: inherit !important;
+	border-color: inherit !important;
+}
+
+.controlText, label, .woocommerce-cart-form *, .checkout * {
+	font-size: 14pt !important;
+	font-weight: normal !important;
+}
+
+.woocommerce form .form-row {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+@media(min-width: 768px) {
+	.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,
+	.cart-empty,
+	.control, .woocommerce-info, select, span.option, .optionsHeader, button.control,
+	label, .woocommerce-input-wrapper {
+		padding-top: 4px !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		font-size: 18pt !important;
+		height: 1.8em !important;
+	}
+	.controlText, label, form[name=checkout] input, .woocommerce-cart-form *, .checkout * {
+		font-size: 18pt !important;
+	}
+}
+
+.product {
+	width: 100%;
+}
+
+.woocommerce div.product div.summary {
+	margin-bottom: 0 !important;
+}
+
+.variations {
+	margin-left: -12px;
+}
+
+@media(min-width: 768px) {
+	.variations {
+		margin-left: -20px;
+	}
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single {
+	border: none !important;
+	line-height: 1em !important;
+	background-color: transparent !important;
+	-webkit-appearance: none !important;
+	border-radius: 0 !important;
+	color: inherit !important;
+}
+
+.variations .value {
+	display: block;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-top: -1px;
+}
+
+.variations .value select {
+	/*opacity: 0;
+	position: fixed;
+	left: -1000px;*/
+
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	font-family: 'honitonregular';
+}
+
+.woocommerce div.product form.cart {
+	margin-bottom: 0 !important;
+}
+
+.woocommerce div.product form.cart .variations {
+	margin-bottom: 0 !important;
+}
+
+.woocommerce-notices-wrapper, .woocommerce-message {
+	display: none !important;
+	pointer-events: none !important;
+	opacity: 0 !important;
+	height: 0 !important;
+	overflow: hidden !important;
+	position: fixed !important;
+	top: -100vh !important;
+}
+
+form[name=checkout] input {
+	/*border-top: none !important;*/
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+	padding: 0 !important;
+	background-color: transparent !important;
+	border: none !important;
+	line-height: 1.2em !important;
+	color: inherit !important;
+}
+
+.wc_payment_methods,
+.payment_methods,
+.methods {
+	padding: 0 !important
+}
+
+#add_payment_method #payment ul.payment_methods::after, #add_payment_method #payment ul.payment_methods::before, .woocommerce-cart #payment ul.payment_methods::after, .woocommerce-cart #payment ul.payment_methods::before, .woocommerce-checkout #payment ul.payment_methods::after, .woocommerce-checkout #payment ul.payment_methods::before {
+	content: none !important;
+	display: none !important;
+}
+
+.woocommerce-info {
+	margin-bottom: 0 !important;
+}
+
+.wc_payment_method input[type="radio"] {
+	display: none;
+	-webkit-appearance: radio !important;
+	margin-top: 0;
+}
+
+.wc_payment_method {
+	display: block !important;
+}
+
+label img {
+	display: none !important;
+}
+
+.woocommerce-error::before, .woocommerce-info::before, .woocommerce-message::before {
+	content: none !important;
+	top: 0 !important;
+	display: none !important;
+}
+
+.woocommerce button#place_order[name=woocommerce_checkout_place_order] {
+	margin-top: -7px !important;
+}
+
+.payment_methods {
+	display: none !important;
+}
+
+.about_paypal {
+	display: none !important;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+	opacity: 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+	float: left !important;
+}
+
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
+	margin: 0 !important;
+	border: none !important;
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+	background: transparent !important;
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+	background-color: transparent !important;
+	color: inherit !important;
+	border: none !important;
+	line-height: 1.2em !important;
+	border-radius: 0 !important;
+}
+
+.controls *,
+.buyingoptions * {
+	font-family: inherit !important;
+}
+
+.content {
+	max-height: 100vh;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*Canvas stuff*/
+
+body .content {
+	opacity: 0;
+}
+
+body.loaded .content {
+	opacity: 1;
+}
+
+#wipeyCanvas {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	position: fixed;
+	z-index: 9999;
+	transition: opacity 2.4s ease;
+}
+
+.canvasTransparent #wipeyCanvas {
+	opacity: 0;
+}
