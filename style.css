@@ -322,7 +322,6 @@ p{
   hyphens: auto;
   -webkit-hyphens:auto;
   -ms-hyphens:auto;
-  text-align: justify;
   text-justify: inter-word;
   overflow-wrap:break-word;
 }
