@@ -43,21 +43,6 @@ body.canvasTransparent {
 }
 
 
-@media (min-width: 1024px) {
-	.homepage-text-holder {
-		width: 92%;
-		max-width: 100%;
-		padding: 40px 50px;
-	}
-	.homepage-text {
-		font-size: 5em;
-		line-height: 1.2em;
-	  -webkit-perspective: 5em; /* Safari 4-8 */
-	  -webkit-perspective-origin: top; /* Safari 4-8 */
-	  perspective: 1em;
-	  perspective-origin: top;
-	}
-}
 
 ::-webkit-scrollbar {
 	display: none;
