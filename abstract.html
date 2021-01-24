@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Disrupting Whiteness</title>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/qyi5yfv.css">
@@ -16,6 +17,10 @@
 
   <div id="header">
       <h5>Abstract</h5>
+    </div>
+
+    <div class="scratch-container">
+      <div id="promo" class="scratchpad"></div>
     </div>
 
   <div class="container">
@@ -54,5 +59,32 @@
         </body>
 
          <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+         <script type="text/javascript" src="https://jennamolby.com/scratch-and-win/js/wScratchPad.min.js"></script>
+
+         <script type="text/javascript">
+
+         var promoCode = '';
+         var bg1 = "Media/costume4.jpg";
+         var bgArray= [ bg1],
+         selectBG = bgArray[Math.floor(Math.random() * bgArray.length)];
+         if (selectBG == bg1) {
+             promoCode = 'SCRATCH400';
+           }
+
+         $('#promo').wScratchPad({
+             // the size of the eraser
+             size        : 100,
+             // the randomized scratch image
+             bg:  selectBG,
+             // give real-time updates
+             realtime    : true,
+             // The overlay image
+             fg: "Media/white.jpeg",
+             // The cursor (coin) image
+             'cursor': '("Media/white.jpeg") 5 5, default',
+
+          });
+         </script>
 
         </html>

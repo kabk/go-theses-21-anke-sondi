@@ -396,3 +396,25 @@ g{
   font-size: 20px;
 
 }
+
+.scratchpad{
+  width: 400px;
+  /* height: 445px; */
+  border: none;
+  margin-top:0 auto;
+}
+
+.scratch-container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width:100%;
+  border: none;
+}
+@media only screen and (max-width : 480px) {
+  .scratchpad {width:400px;height:600px;border: none;}
+  .scratch-container {width:100% !important; border: none;  padding-top: 50px;}
+}
