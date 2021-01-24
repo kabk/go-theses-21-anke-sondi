@@ -566,3 +566,36 @@ img:hover {
     -webkit-filter: blur(0px);
 
 }
+
+#button {
+  display: inline-block;
+  background-color: transparent;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  font-size: 2em;
+  line-height: 10px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+#button:active {
+  background-color: transparent;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
