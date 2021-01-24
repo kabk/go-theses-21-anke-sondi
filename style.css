@@ -582,9 +582,10 @@ img:hover {
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
+  font-size: 1.3em;
 }
 #button::after {
-  font-size: 2em;
+  font-size: 5em;
   line-height: 10px;
   color: #fff;
 }
