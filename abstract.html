@@ -457,18 +457,17 @@
              fg: "Media/white.jpg",
              // The cursor (coin) image
              'cursor': '("Media/cursor.png") 5 5, default',
-
           });
-         </script>
 
-      <script type="text/javascript">
-         $(window).scroll(function() {
-           var scroll = $(window).scrollTop();
-           $('.alignfull').css({
-             filter:"blur(" + (scroll/10) + "px)"
-           })
-           });
-         });</script>
+          $(window).scroll(function() {
+            var heroBlur = 10 - Math.floor($(this).scrollTop() / 100);
+            if (heroBlur < 0) { heroBlur = 0; }
+            $('.alignfull').css({
+              '-webkit-filter': 'blur('+heroBlur+'px)'
+            });
+          });
+
+         </script>
 
 
         </html>
