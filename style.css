@@ -274,9 +274,9 @@ body {
 #header {
   padding-top:5px;
   padding-left:5px;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   position: sticky;
-  top: 0;
+  top: 20px;
   background-color: white;
   width:100vw;
 }
@@ -284,10 +284,12 @@ body {
 #header2 {
   padding-top:5px;
   padding-left:5px;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   position: sticky;
   background-color: white;
   width:100vw;
+  top: 0;
+
 }
 
 
@@ -381,6 +383,7 @@ h6{
   line-height: 1.1em;
   -webkit-font-smoothing: antialiased;
   padding-top: 5px;
+  padding-bottom: 30px;
 }
 
 h1{
