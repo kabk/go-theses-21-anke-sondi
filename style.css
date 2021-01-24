@@ -487,14 +487,6 @@ g{
     margin-right: calc(50% - 50vw);
     max-width: 1000%;
     width: auto;
-}
+    -webkit-filter: blur(20px);
 
-@blVal: 8px;
-
-.blur{
-  -webkit-filter: blur(@blVal);
-  -moz-filter: blur(@blVal);
-  -o-filter: blur(@blVal);
-  -ms-filter: blur(@blVal);
-  filter: blur(@blVal);
 }
