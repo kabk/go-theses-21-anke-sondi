@@ -240,6 +240,30 @@ body {
   margin-left:20px;
 }
 
+#colophon-dropdown{
+  height: 100%;
+  /* margin-left:20px; */
+  width: 100%;
+  margin-top:20px;
+  padding-top: 70px;
+  padding-left: 35px;
+
+}
+
+#colophon1-dropdown{
+  height: 100%;
+  /* margin-left:20px; */
+  width: 100%;
+  margin-top:20px;
+  padding-left: 35px;
+
+}
+
+#colophon-content {
+  /* display: none; */
+  margin-left:20px;
+}
+
 .container {
   /* margin-top:60px;
   margin-left:8px; */
