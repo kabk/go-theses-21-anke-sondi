@@ -488,3 +488,13 @@ g{
     max-width: 1000%;
     width: auto;
 }
+
+@blVal: 8px;
+
+.blur{
+  -webkit-filter: blur(@blVal);
+  -moz-filter: blur(@blVal);
+  -o-filter: blur(@blVal);
+  -ms-filter: blur(@blVal);
+  filter: blur(@blVal);
+}
