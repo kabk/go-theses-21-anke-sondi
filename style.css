@@ -241,6 +241,15 @@ body {
   overflow:hidden;
 }
 
+.container2 {
+  /* margin-top:60px;
+  margin-left:8px; */
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+
 @media only screen and (orientation:landscape) {
     .container {
     padding-top:35px;
@@ -250,13 +259,33 @@ body {
     height: 100%;
     overflow:hidden;
   }
+
+  .container2 {
+  padding-top:35px;
+  padding-left:20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
 }
 
 
 #header {
   padding-top:5px;
   padding-left:5px;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width:100vw;
+}
+
+#header2 {
+  padding-top:5px;
+  padding-left:5px;
+  position: -webkit-sticky;
+  position: sticky;
   background-color: white;
   width:100vw;
 }
@@ -334,6 +363,8 @@ h5{
   font-size: 24px;
   -webkit-font-smoothing: antialiased;
   border-bottom: black 1px solid;
+  border-top: black 1px solid;
+  margin-top:20px;
   padding-bottom: 10px;
   padding-top: 5px;
 
@@ -349,8 +380,7 @@ h6{
   padding-left: 20px;
   line-height: 1.1em;
   -webkit-font-smoothing: antialiased;
-  padding-top: -100px;
-
+  padding-top: 5px;
 }
 
 h1{
