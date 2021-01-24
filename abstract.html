@@ -431,10 +431,8 @@
 
         </body>
 
-         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-         <script type="text/javascript" src="https://jennamolby.com/scratch-and-win/js/wScratchPad.min.js"></script>
-         <script src="script.js"></script>
+
+         <!-- <script src="script.js"></script> -->
 
          <script type="text/javascript">
 
@@ -460,5 +458,19 @@
 
           });
          </script>
+
+      <script type="text/javascript">
+         $(window).scroll(function() {
+           var scroll = $(window).scrollTop();
+           $('.alignfull').css({
+             filter:"blur(" + (scroll/10) + "px)"
+           })
+           });
+         });</script>
+
+         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+         <script type="text/javascript" src="https://jennamolby.com/scratch-and-win/js/wScratchPad.min.js"></script>
+
 
         </html>
