@@ -443,6 +443,44 @@ p{
   overflow-wrap:break-word;
 }
 
+.censor{
+/*  margin-left:30px;*/
+  margin-left:20px;
+  /* text-indent: 30px; */
+  font-family: source-serif-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  font-size: 18px;
+  line-height: 20.5px;
+  -webkit-font-smoothing: antialiased;
+  hyphens: auto;
+  -webkit-hyphens:auto;
+  -ms-hyphens:auto;
+  text-justify: inter-word;
+  overflow-wrap:break-word;
+}
+
+
+.censor2{
+/*  margin-left:30px;*/
+  margin-left:20px;
+  /* text-indent: 30px; */
+  font-family: source-serif-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  line-height: 20.5px;
+  -webkit-font-smoothing: antialiased;
+  hyphens: auto;
+  -webkit-hyphens:auto;
+  -ms-hyphens:auto;
+  text-justify: inter-word;
+  overflow-wrap:break-word;
+}
+
 h5{
   font-family: "SangBleu Regular";
   text-align: center;
@@ -558,6 +596,15 @@ g{
     max-width: 1000%;
     width: auto;
     -webkit-filter: blur(10px);
+
+}
+
+.alignfull2 img {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: 1000%;
+    width: auto;
+    /* -webkit-filter: blur(10px); */
 
 }
 
